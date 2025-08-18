@@ -14,7 +14,7 @@ The NeoNephos Foundation is part of the Linux Foundation Europe.
 
 ## :sunflower: Projects
 
-View NeoNephos current projects here.
+View NeoNephos' current projects here.
 
 - **[CobaltCore](https://github.com/cobaltcore-dev):**  CobaltCore is a reimagined, opinionated, and Kubernetes enabled OpenStack distribution, which complements IronCore and bridges the obligation to support the numerous non-cloud-native workloads by ensuring backward compatibility.
 - **[IronCore](https://github.com/ironcore-dev):**  IronCore provides the a reference for compounded software layers for inventorying, managing, and maintaining baremetal using Kubernetes’ principles.
