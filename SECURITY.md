@@ -1,5 +1,3 @@
-<!-- START SAP SECURITY.MD V0.0.1 BLOCK -->
-<!-- Please do not remove the version header, this is needed for automatic updates of the SECURITY.md -->
 # NeoNephos Open Source Security Policy
 
 NeoNephos takes the security of our software products and services seriously, which includes all source code repositories managed through our GitHub organizations, including our primary [NeoNephos](https://github.com/NeoNephos) organization as well as our other GitHub projects.
@@ -10,7 +8,7 @@ If you believe you have found a security vulnerability in any NeoNephos-owned re
 
 **Please do not report security vulnerabilities through public GitHub issues.**
 
-Instead, please report them via the CVE process (it needs to be mentioned here)
+Instead, please report them via the CVE process (the process needs to be mentioned here)
 If you prefer to submit via email, please send an email to [secure@NeoNephos.com](mailto:secure@NeoNephos.com) This is just a proposal for now, we need to add a proper Email later.
 
 Please include the requested information listed below (as much as you can provide) to help us better understand the nature and scope of the possible issue:
@@ -30,4 +28,4 @@ This information will help us triage your report more quickly.
 
 We prefer all communications to be in English.
 
-<!-- END SAP SECURITY.MD V0.0.1 BLOCK -->
+
