@@ -11,7 +11,7 @@ If you believe you have found a security vulnerability in any NeoNephos-owned re
 **Please do not report security vulnerabilities through public GitHub issues.**
 
 Instead, please report them via the CVE process (it needs to be mentioned here)
-If you prefer to submit via email, please send an email to [secure@NeoNephos.com](mailto:secure@NeoNephos.com).
+If you prefer to submit via email, please send an email to [secure@NeoNephos.com](mailto:secure@NeoNephos.com) This is just a proposal for now, we need to add a proper Email later.
 
 Please include the requested information listed below (as much as you can provide) to help us better understand the nature and scope of the possible issue:
 
