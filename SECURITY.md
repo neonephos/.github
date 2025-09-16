@@ -42,7 +42,7 @@ When evaluating a vulnerability for criticality, consider the following:
 > Some examples of critical vulnerabilities:
 > * A function uses a low entrophy source of randomness to seed its cryptographic primitives.
 > * A text section in a publicly available documentation includes secrets like passwords.
-> * A mysql database handling user data is secured with the default password.
+> * A MySQL database handling user data is secured with the default password.
 > * A TSC member is known to work for an intelligence agency of a state.
 
 ### Reporting A Critical Vulnerability
