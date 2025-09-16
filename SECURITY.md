@@ -29,7 +29,7 @@ So you have found a bug or vulnerability in the software of one of our projects.
 
 For non-critical vulnerabilities it is best practice to open up a GitHub issue at the respective project repository.
 
-<img src="assets/security_policy_open_github_issue.png" alt="Reporting a noncritical vulnerability or bug via GitHub issues." width="300"/>
+<img src="assets/security_policy_open_github_issue.png" alt="Reporting a noncritical vulnerability or bug via GitHub issues." width="400"/>
 
 A vulnerability is not necessarily code and can also be intended to mean vulnerabilities in processes, tools, guidelines and more. 
 When evaluating a vulnerability for criticality, consider the following:
@@ -56,7 +56,7 @@ Vulnerability reports propagate upwards in NeoNephos, from project to foundation
 
 A project specific vulnerability reporting process always takes precedence over the general reporting process outlined here. If none can be found, check if the organisation has enabled GitHub's vulnerability reporting.
 
-<img src="assets/security_policy_github_vulnerability_report.png" alt="GitHub's vulnerability reporting feature." width="300"/>
+<img src="assets/security_policy_github_vulnerability_report.png" alt="GitHub's vulnerability reporting feature." width="400"/>
 
 [Reporting a vulnerability via GitHub's inbuilt feature](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability) is a secure way to privately diclose your found vulnerability.
 
