@@ -1,31 +1,68 @@
-# NeoNephos Open Source Security Policy
+# Policy On Reporting Vulnerabilities
 
-NeoNephos takes the security of our software products and services seriously, which includes all source code repositories managed through our GitHub organizations, including our primary [NeoNephos](https://github.com/NeoNephos) organization as well as our other GitHub projects.
+## How To Report A Vulnerability
 
-If you believe you have found a security vulnerability in any NeoNephos-owned repository, please report it to us as described below.
+> [!IMPORTANT]  
+> Only report vulnerabilities via the process outlined here.
 
-## Reporting Security Issues
+### Determining Criticality
 
-**Please do not report security vulnerabilities through public GitHub issues.**
+So you have found a bug or vulnerability in the software of one of our projects. In order to determine the type and recipient of your report, first consider this diagram:
 
-Instead, please report them via the CVE process (the process needs to be mentioned here)
-If you prefer to submit via email, please send an email to [secure@NeoNephos.com](mailto:secure@NeoNephos.com) This is just a proposal for now, we need to add a proper Email later.
+```mermaid
+  flowchart TD;
+      A[Reporting a vulnerability]-->B{Is it a serious vulnerability?};
+      classDef blue1 color:#022e1f,fill:#00b4d8;
+      B--YES-->X[Does the project have its own security policy?];
+      X--YES-->X2[Follow steps outlined in project's security policy.]:::blue1
+      
+      X--NO-->Y2[Does the project have GitHub's vulnerability reporting feature activated?]
+      Y2--YES-->Y3[Report via GitHubs vulnerability reporting.]:::blue1
+      Y2--NO-->Y4[Does the project have a security incidents reports mail?]
+      Y4--YES-->Y5[Report via security incidents mail.]:::blue1
+      Y4--NO-->Y6[Does the project have a security officer?]
+      Y6--YES-->Y7[Report via security officer.]
+      Y6--NO-->Y8[Report via NeoNephos TAC Chairperson]
 
-Please include the requested information listed below (as much as you can provide) to help us better understand the nature and scope of the possible issue:
+      B--NO-->D[Report via GitHub issue in the respective project repository.]:::blue1  ;
+```
 
-  - The repository name or URL
-  - Type of issue (buffer overflow, SQL injection, cross-site scripting, etc.)
-  - Full paths of the source file(s) related to the manifestation of the issue
-  - The location of the affected source code (tag/branch/commit or direct URL)
-  - Any particular configuration required to reproduce the issue
-  - Step-by-step instructions to reproduce the issue
-  - Proof-of-concept or exploit code (if possible)
-  - Impact of the issue, including how an attacker might exploit the issue
+For non-critical vulnerabilities it is best practice to open up a GitHub issue at the respective project repository.
 
-This information will help us triage your report more quickly.
+<img src="../assets/security_policy_open_github_issue.svg" alt="Reporting a noncritical vulnerability or bug via GitHub issues." width="300"/>
 
-## Preferred Languages
+A vulnerability is not necessarily code and can also be intended to mean vulnerabilities in processes, tools, guidelines and more. 
+When evaluating a vulnerability for criticality, consider the following:
 
-We prefer all communications to be in English.
+* Does the vulnerability expose users or developers of our projects to significant danger?
+* Does the vulnerability lead to leakage or loss of otherwise private data?
+* Does the vulnerability adversely affect the secrecy guarantees posited by our utilized cryptographic primitives?
 
+> [!NOTE]  
+> Some examples of critical vulnerabilities:
+> * A function uses a low entrophy source of randomness to seed its cryptographic primitives.
+> * A text section in a publicly available documentation includes secrets like passwords.
+> * A mysql database handling user data is secured with the default password.
+> * A TSC member is known to work for an intelligence agency of a state.
 
+### Reporting A Critical Vulnerability
+
+Vulnerability reports propagate upwards in NeoNephos, from project to foundation scope. Therefore, when reporting a critical vulnerability, the first step is to review if a dedicated security policy is available for the project. 
+
+**NeoNephos Projects With A Published Security Policy:**
+
+* **[Gardener Security Policy](https://gardener.cloud/docs/security-and-compliance/)** and **[Gardener Security Release Process](https://github.com/gardener/gardener/security)**
+* **[Garden Linux Security Release Process](https://github.com/gardenlinux/gardenlinux/security)**
+
+A project specific vulnerability reporting process always takes precedence over the general reporting process outlined here. If none can be found, check if the organisation has enabled GitHub's vulnerability reporting.
+
+<img src="../assets/security_policy_github_vulnerability_report.svg" alt="GitHub's vulnerability reporting feature." width="300"/>
+
+[Reporting a vulnerability via GitHub's inbuilt feature](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability) is a secure way to privately diclose your found vulnerability.
+
+If disabled, check for security disclose e-mails or contact details of a member dedicated to handling security reports. The latter can usually be found listed among other Technical Steering Committee members in a ```OWNERS.md```.
+As a last resort, [contact the Technical Advisory Council chairperson](https://neonephos.org/technical_advisory_council) to handle the report.
+
+## Related Reading
+
+* Our Security Policy (in the works)
