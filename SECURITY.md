@@ -82,6 +82,15 @@ for vulnerability handling. In summary:
 - **Embargo**: Vulnerability details will remain confidential for up to **90
   days** from report receipt while a fix is developed, consistent with the
   [Google Project Zero disclosure policy](https://googleprojectzero.blogspot.com/2021/04/policy-and-disclosure-2021-edition.html).
+- **Fix review**: Every security fix is reviewed by at least one maintainer
+  other than its author before it is merged and released, as required by
+  [Security Guidelines §6.3](https://github.com/neonephos/guidelines-development/blob/main/security-guidelines/security-guidelines.md#63-fix-coordination).
+  For embargoed fixes that review happens in the private workspace of the
+  GitHub Security Advisory, before the fix becomes public.
+- **CVE assignment**: We request a CVE identifier for every confirmed
+  vulnerability with a CVSS score of **4.0 or higher**, through the CVE
+  request on the GitHub Security Advisory of the affected repository, which
+  GitHub handles as the CNA for this organization.
 - **Disclosure**: Once a fix is available (or the embargo expires), we will
   publish a security advisory with full details.
 
@@ -114,6 +123,21 @@ We ask that you:
 
 We are committed to crediting reporters in our security advisories unless you
 prefer to remain anonymous.
+
+## Past Security Advisories
+
+We keep a public record of every advisory we publish. Advisories are published
+on the repository they affect and are listed on that repository's **Security**
+tab, under **Advisories** — for example
+[neonephos/.github advisories](https://github.com/neonephos/.github/security/advisories).
+Published advisories are additionally mirrored into the
+[GitHub Advisory Database](https://github.com/advisories?query=neonephos),
+which is readable without a GitHub account, and are available from the REST
+API at `GET /orgs/neonephos/security-advisories` for the whole organization.
+
+**No security advisory has been published for this organization to date.** The
+listings above are the authoritative record and will show advisories as soon
+as any are published.
 
 ## CRA Stewardship
 
